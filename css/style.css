@@ -41,6 +41,11 @@ header {
     align-items: center;
 }
 
+header.scrolled {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-bottom-color: var(--accent);
+}
+
 .logo {
     font-weight: 900;
     font-size: 1.5rem;
@@ -539,33 +544,53 @@ footer {
     .header-right {
         gap: 1rem;
     }
-
+    
     nav ul {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--bg-dark);
+        background: #0a0a0c;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
         gap: 1.5rem;
         display: none;
-        border-bottom: 1px solid var(--border);
+        border-top: 2px solid var(--accent);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
-
+    
     nav ul.active {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
-
+    
     .burger {
         display: block;
     }
-
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+        transition: all 0.3s;
+        display: block;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a:focus {
+        background: rgba(212, 175, 55, 0.15);
+        color: var(--accent);
+    }
+    
     .lang-switcher {
         padding: 0.25rem;
     }
-
+    
     .lang-btn {
         width: 36px;
         height: 36px;

@@ -144,20 +144,26 @@ nav a:hover {
     color: var(--text-main);
 }
 
-nav, .lang-switcher {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeSlideUp 0.6s ease-out forwards;
+nav,
+.lang-switcher {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeSlideUp 0.6s ease-out forwards;
 }
 
-nav { animation-delay: 0.15s; }
-.lang-switcher { animation-delay: 0.3s; }
+nav {
+    animation-delay: 0.15s;
+}
+
+.lang-switcher {
+    animation-delay: 0.3s;
+}
 
 @keyframes fadeSlideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- HERO --- */
@@ -544,7 +550,7 @@ footer {
     .header-right {
         gap: 1rem;
     }
-    
+
     nav ul {
         position: absolute;
         top: calc(100% + 38px);
@@ -563,17 +569,17 @@ footer {
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    
+
     nav ul.active {
         display: flex;
         opacity: 1;
         transform: translateY(0);
     }
-    
+
     .burger {
         display: block;
     }
-    
+
     nav ul li a {
         font-size: 1.1rem;
         padding: 0.6rem 1.5rem;
@@ -581,17 +587,17 @@ footer {
         transition: all 0.3s;
         display: block;
     }
-    
+
     nav ul li a:hover,
     nav ul li a:focus {
         background: rgba(212, 175, 55, 0.15);
         color: var(--accent);
     }
-    
+
     .lang-switcher {
         padding: 0.25rem;
     }
-    
+
     .lang-btn {
         width: 36px;
         height: 36px;
